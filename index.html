@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Welcome to Nietzsche's web pages.</title>
+ </head>
+ <body>
+  <h1>work notes</h1>  
+   <h2>2015-03-23</h2>
+    <p>1</p>
+    <p>in ssms, when using t-sql to manipulate records, use "begin transaction" plus "rollback" before "commit".<br>
+    e.g. <br>
+    begin transaction <br>
+    delete from tablename where id > 100<br>
+    rollback<br>
+    and ssms will tell you how many rows are affected.<br>
+    if you feel that's correct, change rollback to commit, and execute<br>
+    p.s. this solution may not be exactly correct, it works for me so far, I did not study into the implications yet. 
+    </p>
+    <p>2</p>
+    
+ </body>
+</html>
