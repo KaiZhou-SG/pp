@@ -6,17 +6,31 @@
  <body>
   <h1>work notes</h1>  
    <h2>2015-03-23</h2>
-    <p>1</p>
-    <p>in ssms, when using t-sql to manipulate records, use "begin transaction" plus "rollback" before "commit".<br>
-    e.g. <br>
-    begin transaction <br>
-    delete from tablename where id > 100<br>
-    rollback<br>
-    and ssms will tell you how many rows are affected.<br>
-    if you feel that's correct, change rollback to commit, and execute<br>
+    <h3>1 use transaction</h3>
+    <p>in ssms, when using t-sql to manipulate records, use "begin transaction" plus "rollback" before "commit".<br/>
+    e.g. <br/>
+    begin transaction <br/>
+    delete from tablename where id > 100<br/>
+    rollback<br/>
+    and ssms will tell you how many rows are affected.<br/>
+    if you feel that's correct, change rollback to commit, and execute<br/>
     p.s. this solution may not be exactly correct, it works for me so far, I did not study into the implications yet. 
     </p>
-    <p>2</p>
-    
+  <h2>2015-04-01</h2>
+   <h3>1 clone a database</h3>
+   <p>make a clone of a database within the same sql server instance:<br/>
+   <ol>
+    <li>in the sql server instance, create an empty new database, name it as originame_clone</li>
+    <li>back up the database I want to clone, note the path backup file is kept, name it as origin_bk_path</li>
+    <li>right click the database: originame_clone, go to tasks --> restore</li>
+    <li>set device to origin_bk_path</li>
+    <li>under select a page, choose: File</li>
+    <li>the origin file path and destination file path are set by default, change the path of the destination file to what you want</li>
+    <li>apply</li>
+   </ol>
+   </p>
+   <p>there is also a case whereby I want to clone a database from one sql server instance to another, or even from one sql server to another sql server.<br/>
+   That is not discussed here, for quick reference, it's said by MSDN that I can do that via "Copy Database" option via right click a database --> Tasks --> Copy database
+   </p>
  </body>
 </html>
