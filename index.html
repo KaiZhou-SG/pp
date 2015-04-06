@@ -2,8 +2,10 @@
 <html>
  <head>
   <title>Welcome to Nietzsche's web pages.</title>
+  <link rel="stylesheet" content-type="text/css" href="./global.css"/> 
  </head>
  <body>
+  <div class="content">
   <h1>work notes</h1>  
    <h2>2015-03-23</h2>
     <h3>1 use transaction</h3>
@@ -35,5 +37,24 @@
    <h3>2 useful command</h3>
    <p>man intro<br/>
    This command will teach me how to use command line in general</p>
+   <h2>2015-04-06</h2>
+   <h3>fix the width of my web pages</h3>
+   <p>it's a good practice to make sure the text doesn't trancate when
+   fold the web page to the side of the screen. howerver, it's very
+   annoying to write a lot of br tags to change-line manually. Now
+   here is the elegant solution:<br/>
+   <ol>
+    <li>enclosing the whole web page body in a div</li>
+    <li>set the width attribute of that div to 700px</li>
+    code examples:<br/>
+    div.content {width: 700px}<br/>
+    &lt;body&gt;<br/>
+     &lt; div class="content"&gt;<br/>
+     ...<br/>
+     &lt;/div&gt;<br/>
+    &lt;/body&gt;<br/>
+   </ol>
+   </p>
  </body>
+ </div>
 </html>
